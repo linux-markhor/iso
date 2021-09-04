@@ -1,0 +1,11 @@
+#!/bin/bash
+
+package=gdm
+if pacman -Qs $package > /dev/null ; then
+    ln -sf /usr/lib/systemd/system/gdm.service /etc/systemd/#system/display-manager.service
+fi
+
+echo "#################################"
+echo "End markhorlinux-displaymanager-check"
+echo "#################################"
+rm /usr/local/bin/markhorlinux-displaymanager-check

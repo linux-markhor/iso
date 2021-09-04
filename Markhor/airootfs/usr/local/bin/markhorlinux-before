@@ -1,0 +1,25 @@
+#!/bin/bash
+echo "#################################"
+echo "Start markhorlinux-before"
+echo "#################################"
+
+echo "Populate Core Team keys"
+echo "#################################"
+pacman-key --init
+pacman-key --populate archlinux
+pacman-key --populate markhorlinux
+pacman-key --populate chaotic
+
+echo "Copy grub Vimix theme (archiso deletes /boot when making the ISO)"
+echo "#################################"
+mkdir -p /boot/grub/themes
+cp -Rf /usr/share/grub/themes/Vimix /boot/grub/themes/
+
+echo "Changing into our own linux.preset"
+echo "#################################"
+mv /etc/mkinitcpio.d/markhorlinux /etc/mkinitcpio.d/linux.preset
+
+echo "#################################"
+echo "End markhorlinux-before"
+echo "#################################"
+rm /usr/local/bin/markhorlinux-before
