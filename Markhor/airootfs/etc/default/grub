@@ -2,7 +2,7 @@
 
 GRUB_DEFAULT=0
 GRUB_TIMEOUT=5
-GRUB_DISTRIBUTOR="Markhor Linux"
+GRUB_DISTRIBUTOR="ArcoLinux"
 GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet audit=0"
 GRUB_CMDLINE_LINUX=""
 
@@ -44,7 +44,7 @@ GRUB_DISABLE_RECOVERY=true
 
 # Uncomment one of them for the gfx desired, a image background or a gfxtheme
 #GRUB_BACKGROUND="/path/to/wallpaper"
-GRUB_THEME="/boot/grub/themes/Vimix/theme.txt"
+GRUB_THEME="/boot/grub/themes/markhor/theme.txt"
 
 # Uncomment to get a beep at GRUB start
 #GRUB_INIT_TUNE="480 440 1"

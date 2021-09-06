@@ -1,4 +1,17 @@
 #!/bin/bash
+#set -e
+##################################################################################################################
+# Author	:	Erik Dubois
+# Website	:	https://www.erikdubois.be
+# Website	:	https://www.arcolinux.info
+# Website	:	https://www.arcolinux.com
+# Website	:	https://www.arcolinuxd.com
+# Website	:	https://www.arcolinuxforum.com
+##################################################################################################################
+#
+#   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
+#
+##################################################################################################################
 
 numberofcores=$(grep -c ^processor /proc/cpuinfo)
 
@@ -16,6 +29,6 @@ else
 fi
 
 echo "#################################"
-echo "End markhorlinux-all-cores"
+echo "End arcolinux-all-cores"
 echo "#################################"
-rm /usr/local/bin/markhorlinux-all-cores
+rm /usr/local/bin/arcolinux-all-cores

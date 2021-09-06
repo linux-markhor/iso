@@ -1,6 +1,6 @@
 #!/bin/bash
 # driver=free or driver=nonfree - grub and efi
-echo "Start markhorlinux-remove-nvidia"
+echo "Start arcolinux-remove-nvidia"
 kernel_cmdline(){
 	for param in $(cat /proc/cmdline); do
 		case "${param}" in
@@ -117,8 +117,8 @@ if [[ $selection == "none" ]]; then
 fi
 
 echo "#################################"
-echo "End markhorlinux-remove-nvidia"
+echo "End arcolinux-remove-nvidia"
 echo "#################################"
-#rm /usr/local/bin/markhorlinux-remove-nvidia
+#rm /usr/local/bin/arcolinux-remove-nvidia
 # keep it on
 systemctl disable arcolinux-remove-nvidia.service

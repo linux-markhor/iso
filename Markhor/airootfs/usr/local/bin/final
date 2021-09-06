@@ -1,7 +1,7 @@
 #!/bin/bash
 echo
 echo "#################################"
-echo "Start markhorlinux-final"
+echo "Start arcolinux-final"
 echo "#################################"
 
 echo "Permissions of important folders"
@@ -18,11 +18,11 @@ echo "Cleanup autologin root"
 echo "#################################"
 rm -rf /etc/systemd/system/getty@tty1.service.d
 
-echo "Fix for pamac icons not showing"
-echo "#################################"
-zcat /usr/share/app-info/xmls/community.xml.gz | sed 's|<em>||g;s|<\/em>||g;' | gzip > "new.xml.gz"
-mv new.xml.gz /usr/share/app-info/xmls/community.xml.gz
-appstreamcli refresh-cache --force
+#echo "Fix for pamac icons not showing"
+#echo "#################################"
+#zcat /usr/share/app-info/xmls/community.xml.gz | sed 's|<em>||g;s|<\/em>||g;' | gzip > "new.xml.gz"
+#mv new.xml.gz /usr/share/app-info/xmls/community.xml.gz
+#appstreamcli refresh-cache --force
 
 echo "Setting editor to nano"
 echo "#################################"
@@ -41,7 +41,7 @@ rm -rf /usr/share/backgrounds/xfce
 rm -f /etc/polkit-1/rules.d/49-nopasswd_global.rules
 rm -r /etc/systemd/system/etc-pacman.d-gnupg.mount
 rm /root/{.automated_script.sh,.zlogin}
-mv /etc/markhorlinux-release /etc/lsb-release
+mv /etc/arcolinux-release /etc/lsb-release
 
 echo "Permission of root"
 echo "#################################"
@@ -52,9 +52,9 @@ chmod -v 750 /root
 #echo "#################################"
 #hardcode-fixer
 
-/usr/local/bin/markhorlinux-virtual-machine-check
+/usr/local/bin/arcolinux-virtual-machine-check
 
 echo "#################################"
-echo "End markhorlinux-final"
+echo "End arcolinux-final"
 echo "#################################"
-rm /usr/local/bin/markhorlinux-final
+rm /usr/local/bin/arcolinux-final
